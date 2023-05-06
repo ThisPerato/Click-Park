@@ -1,0 +1,74 @@
+<?php include('server.php') ?>
+
+
+
+<!DOCTYPE HTML>
+<html lang="it" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Benvenuto su Click&Park!</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">        
+
+</head>
+
+<body>
+
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form name="signup" action="server.php" method="post" onsubmit="return checkDatiSignUp();">
+                
+                <h1> Crea un account</h1>
+                <div class="social-container">
+                    <a href="https://it-it.facebook.com/login.php/" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://accounts.google.com/v3/signin/identifier?dsh=S1275928363%3A1682879985398835&continue=https%3A%2F%2Ftakeout.google.com%2F%3Fhl%3Dit&followup=https%3A%2F%2Ftakeout.google.com%2F%3Fhl%3Dit&hl=it&ifkv=Af_xneHcue9l95ESSBtR42D3uGmaVbyMJVWYdWLg8v_KAXpG-YZQwRExD4RIDqj008fnkdHyOeuVBQ&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin" class="social"><i class="fab fa-google"></i></a>
+                    <a href="https://twitter.com/login?lang=it" class="social"><i class="fab fa-twitter"></i></a>
+                </div>
+                <span> oppure utilizza la tua email</span>
+                <input type="text" placeholder="Nome" name="nome" id="name" on/>
+                <input type="text" placeholder="Cognome" name="cognome" id="surname"  />
+                <input type="email" placeholder="Email" name="email" id="Email"/>
+                <input type="password" placeholder="Password" name="password" id="psw" />
+                <button type="submit" name="sign_up">Iscriviti</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form name="signin" action="server.php" method="post" onsubmit="return checkDatiSignIn();"  >
+                <h1> Accedi</h1>
+                <div class="social-container">
+                    <a href="https://it-it.facebook.com/login.php/" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://accounts.google.com/v3/signin/identifier?dsh=S1275928363%3A1682879985398835&continue=https%3A%2F%2Ftakeout.google.com%2F%3Fhl%3Dit&followup=https%3A%2F%2Ftakeout.google.com%2F%3Fhl%3Dit&hl=it&ifkv=Af_xneHcue9l95ESSBtR42D3uGmaVbyMJVWYdWLg8v_KAXpG-YZQwRExD4RIDqj008fnkdHyOeuVBQ&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin" class="social"><i class="fab fa-google"></i></a>
+                    <a href="https://twitter.com/login?lang=it" class="social"><i class="fab fa-twitter"></i></a>
+                </div>
+                <span> oppure utilizza il tuo account</span>
+                <input type="email" placeholder="Email" name="email" />
+                <input type="password" placeholder="Password" name="password"/>
+                <a href="password_forgot.html">Hai dimenticato la tua password?</a>
+                <button type="submit" name="log_in">Accedi</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1> Bentornato su Click&Park!</h1>
+                    <p> Per rimanere connesso con noi, esegui il login con il tuo account per favore.</p>
+                    <button class="ghost" id="signIn">Accedi</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Ciao! Benvenuto su Click&Park!</h1>
+                    <p>Inserisci i tuoi dati per accedere ai nostri servizi.</p>
+                    <button class="ghost" id="signUp">Iscriviti</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="script.js" charset="utf-8"></script>
+
+</body>
+
+</html>

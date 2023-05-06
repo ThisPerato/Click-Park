@@ -1,0 +1,468 @@
+
+<!DOCTYPE html>
+
+
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>Cerca parcheggio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <style>
+    
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+html {
+     height: 100%;
+     line-height: 1.8;
+    }
+
+    
+
+    body {
+        background-color: #f2eee3;
+    }
+
+    .w3-bar .w3-button {
+        padding: 16px;
+    }
+
+    .modal{
+    --gap: 15px;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: var(--gap);
+    background: rgba(0,0,0,0.5);
+    display: none;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+  }
+
+  .modal-inner{
+    background: #ffffff;
+    width: 100%;
+    max-width: 800px;
+    overflow: hidden;
+    border-radius: 4px;
+  }
+
+  .modal-top{
+    display: flex;
+    align-items: center;
+    background-color: #eeeeee;
+  }
+
+  .modal-title{
+    flex-grow: 1;
+    padding: 0 var(--gap);
+    font-size: 20px;
+  }
+
+  .modal-close{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: var(--gap);
+    background: none;
+    border: none;
+    outline: none;
+  }
+
+  .modal-content{
+    position: relative;
+    margin: auto;
+    padding: 0 var(--gap);
+    line-height: 1.5;
+    -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+  }
+
+  @-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+  .modal-bottom{
+    text-align: right;
+    padding: 0 var(--gap) var(--gap) var(--gap);
+  }
+
+  .modal-button{
+    display: inline-block;
+    padding: 6px 12px;
+    background: #009578;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .selectmunicipio{
+    display: flex;
+    align-items: center;
+    padding: 0 var(--gap)
+  }
+
+  .selectmunicipio1{
+    display: flex;
+    align-items: left;
+    padding: 0 var(--gap)
+  }
+
+  .via{
+    display: flex;
+    justify-content: center;
+    padding: 0 var(--gap)
+  }
+
+
+
+
+body {
+    background-color: #f2eee3;
+}
+#menu__toggle {
+  opacity: 0;
+}
+#menu__toggle:checked + .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked + .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0deg);
+}
+#menu__toggle:checked + .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  left: 0 !important;
+}
+.menu__btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #616161;
+  transition-duration: .25s;
+}
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+.menu__box {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  background-color: #ECEFF1;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+  transition-duration: .25s;
+}
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition-duration: .25s;
+}
+.menu__item:hover {
+  background-color: #CFD8DC;
+}
+
+
+  
+
+
+        </style>
+</head>
+<body>
+
+ 
+    <div class="container">
+   <h1>Hai due scelte di ricerca: puoi cercare un parcheggio per il municipio senza specificare la via oppure puoi cercare una combinazione specifica.</h1>
+   <h2>A te la scelta...
+
+   <br>
+   <br>
+</div>
+
+    <div class="modal" id="modal">
+      <div class="modal-inner">
+        <div class="modal-top">
+          <div class="modal-title">Ricerca per municipio</div>
+          <button class="modal-close" type="button">
+            <span class="close">&times;</span>
+          </button>
+          </div>
+          <div class="modal-content">
+            <p> Seleziona un municipio da quelli presenti sulla lista.</p>
+            <form name="cercamunicipio" action="search.php" method="post">
+            <select name="municipio" id="selectmunicipio" required>
+              <option value="">Scegli un municipio</option>
+              <option value="municipio_I">Municipio I</option>
+              <option value="municipio_II">Municipio II</option>
+              <option value="municipio_III">Municipio III</option>
+              <option value="municipio_IV">Municipio IV</option>
+              <option value="municipio_V">Municipio V</option>
+              <option value="municipio_VI">Municipio VI</option>
+              <option value="municipio_VII">Municipio VII</option>
+              <option value="municipio_VIII">Municipio VIII</option>
+              <option value="municipio_IX">Municipio IX</option>
+              <option value="municipio_X">Municipio X</option>
+              <option value="municipio_XI">Municipio XI</option>
+              <option value="municipio_XII">Municipio XII</option>
+              <option value="municipio_XIII">Municipio XIII</option>
+              <option value="municipio_XIV">Municipio XIV</option>
+              <option value="municipio_XV">Municipio XV</option>
+            </select>
+          
+
+
+          </div>
+          <div class="modal-bottom">
+            <button class="modal_button" type="submit" name="btn_1" >Invia</button>
+          </div>
+        </form>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="modal" id="modal_1">
+      <div class="modal-inner">
+        <div class="modal-top">
+          <div class="modal-title">Ricerca per municipio e via</div>
+          <button class="modal-close" type="button" >
+            <span class="close" id="close_1">&times;</span>
+          </button>
+          </div>
+          <div class="modal-content">
+            <p> Seleziona un municipio ed inserisci una via di quel municipio. Attenzione: se la combinazione municipio + via non è presente nel nostro database, potrai inserirla solamente tramite la sezione Aggiungi un parcheggio!
+              <form name="cercamunicipioevia" action="confirm.php" method="post">
+              <div class="selectMun">
+                <select name="municipio" id="selectmunicipio1" required>
+                  <option value="">Seleziona un municipio</option>
+                  <option value="municipio_i">Municipio I</option>
+                  <option value="municipio_ii">Municipio II</option>
+                  <option value="municipio_iii">Municipio III</option>
+                  <option value="municipio_iv">Municipio IV</option>
+                  <option value="municipio_v">Municipio V</option>
+                  <option value="municipio_vi">Municipio VI</option>
+                  <option value="municipio_vii">Municipio VII</option>
+                  <option value="municipio_viii">Municipio VIII</option>
+                  <option value="municipio_ix">Municipio IX</option>
+                  <option value="municipio_x">Municipio X</option>
+                  <option value="municipio_xi">Municipio XI</option>
+                  <option value="municipio_xii">Municipio XII</option>
+                  <option value="municipio_xiii">Municipio XIII</option>
+                  <option value="municipio_xiv">Municipio XIV</option>
+                  <option value="municipio_xv">Municipio XV</option>
+                </select>
+                <br>
+
+                <input type="text" id="via" name="via_ricerca" placeholder="Inserisci una via" required><br>
+              </div>
+              <div class="modal-bottom">
+                <button class="modal_button" type="submit" name="btn_3" >Invia</button>
+              </div>
+
+              </form>
+            </p>  
+              
+              
+              <br>
+
+              
+            
+          
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="buttons">
+                <button type="button"  id="btn_1">Cerca parcheggio per municipio</button>
+                <button type="button"  id="btn_2">Cerca parcheggio per municipio + via</button>
+    </div>
+
+    <div
+
+    
+
+
+    <br>
+    <br>
+    <br>
+
+    <div class="w3-container w3-row w3-center  w3-padding-64">
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">1</span>
+    <br>Città
+  </div>
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">15</span>
+    <br>Municipi
+  </div>
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">Pochi</span>
+    <br>Parcheggi
+  </div>
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">1</span>
+    <br>Soluzione
+  </div>
+</div>
+
+<div class="hamburger-menu">
+  <input id="menu__toggle" type="checkbox" />
+      <label class="menu__btn" for="menu__toggle">
+        <span></span>
+      </label>
+  
+      <ul class="menu__box">
+        <li><a class="menu__item" href="index.php">Home</a></li>
+        <li><a class="menu__item" href="search.html">Cerca parcheggio</a></li>
+        <li><a class="menu__item" href="account.php">Il mio account</a></li>
+        <li><a class="menu__item" href="insert.html">Aggiungi un parcheggio </a></li>
+        <li><a class="menu__item" href="contact-us.html">Contattaci</a></li>
+        <li><a class="menu__item" href="index.html">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="index.php" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Torna alla pagina iniziale</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</footer>
+
+  <script>
+    var modal= document.getElementById("modal");
+    var btn = document.getElementById("btn_1");
+    var span = document.getElementsByClassName("close")[0];
+    
+    
+    btn.onclick = function(){
+    document.getElementById('modal').style.display='block';
+  }
+  
+  span.onclick=function(){
+    document.getElementById('modal').style.display='none';
+  }
+  
+  window.onclick = function(event){
+    if (event.target==document.getElementById('modal')){
+      document.getElementById('modal').style.display="none";
+    }
+  }
+
+  var modal_1= document.getElementById("modal_1");
+  var btn_1 = document.getElementById("btn_2");  
+  var span_1 = document.getElementsByClassName("close")[1];
+
+  btn_1.onclick = function(){
+    document.getElementById('modal_1').style.display='block';
+  }
+  
+  span_1.onclick=function(){
+    document.getElementById('modal_1').style.display='none';
+  }
+  
+  window.onclick = function(event){
+    if (event.target==document.getElementById('modal_1')){
+      document.getElementById('modal_1').style.display="none";
+    }
+  }
+
+  </script>
+</body>
+</html>
+
+    
