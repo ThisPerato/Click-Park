@@ -1,0 +1,17 @@
+cose da inserire:
+-dark mode
+-icona per le varie pagine
+-responsive card effect nelle varie pagine
+-sistemare il layout del login
+-pagina di conferma per la prenotazione
+-parcheggi preferiti?
+-un'altra barra di ricerca dove e' possibile scrivere direttamente la via
+-tasto per eliminare un veicolo e la rispettiva cronologia
+-pulsante "Come funziona?"
+-pulsante aggiungiparcheggio
+
+
+cose che e' meglio non inserire:
+-mappa
+-recensioni
+-parcheggio per disabili

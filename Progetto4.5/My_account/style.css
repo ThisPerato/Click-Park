@@ -1,0 +1,121 @@
+body{
+    margin-top: 20px;
+    background-image: url(../image/sfondo.png);
+}
+.main{
+    padding: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.topbar{
+    background-color: #242424;
+    overflow: hidden;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.topbar .logo{
+    font-size: 30px;
+    font-weight: bold;
+}
+.topbar .buttons{
+    display: flex;
+    gap: 10px;
+}
+.topbar .buttons button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    padding: 8px 14px;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+
+.topbar .buttons button:hover {
+    color: #ffcc00;
+  }
+
+.sidebar{
+    background-color: #242424;
+    color: #ffcc00;
+    height: 97.8%;
+}
+
+#nome_cognome{
+    font-size: 40px;
+    padding-top: 10px;
+}
+
+.sidebar .buttons{
+    display: flex;
+    flex-direction: column;
+}
+.sidebar .buttons button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    padding-bottom: 18px;
+    font-size: 30px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.sidebar .buttons button:hover {
+    color: #ffcc00;
+}
+.card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.content{
+    background-color: whitesmoke;
+}
+footer {
+    position: fixed;
+    left: 0%;
+    bottom: 0%;
+    width: 100%;
+    background-color: #262626da;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+}
+@media screen and (max-width: 600px) {
+    .topbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .topbar .buttons{
+        margin-top: 10px;
+    }
+}
+table { 
+	width: 700px; 
+	border-collapse: collapse; 
+	margin:50px auto;
+    position: relative;
+    left: -150px;
+	}
+
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+	background: #eee; 
+	}
+
+th { 
+	background: #3498db; 
+	color: white; 
+	font-weight: bold; 
+	}
+
+td, th { 
+	padding: 10px; 
+	border: 1px solid #ccc; 
+	text-align: left; 
+	font-size: 18px;
+	}
