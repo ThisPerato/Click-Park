@@ -1,0 +1,369 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url(./image/sfondo.png);
+  background-repeat: repeat;
+}
+
+.site-panel {
+  background-color: #242424;
+  color: #fff;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.formattazione {
+  height: 70px;
+}
+
+.formattazione1 {
+  height: 100px;
+  background-color: #ffcc00;
+}
+
+.design {
+  width: 100%;
+  height: 5px;
+  background-color: #242424;
+}
+
+.site-panel .logo {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.site-panel .buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.site-panel .buttons button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.site-panel .buttons button:hover {
+  color: #ffcc00;
+}
+
+.search-bar {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 60px auto;
+  margin-left: 3%;
+  margin-right: 3%;
+  background-color: #fff;
+  border: 3px solid #242424;
+  border-radius: 10px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  min-height: 70px;
+}
+
+.search-bar-parametri {
+  background-color: #242424;
+  display: flex;
+  width: 100%;
+  height: 40px;
+  color: #ffcc00;
+}
+
+.search-bar-parametri label {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 16px;
+}
+
+label {
+  font-size: larger;
+}
+
+form {
+  margin-right: 0px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.search-bar select,
+.search-bar input[type="time"],
+.search-bar input[type="text"] {
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  flex: 1 1 auto;
+}
+
+#municipio-select {
+  width: 300px;
+}
+
+#via-select {
+  width: 400px;
+}
+
+#via-search {
+  width: 800px;
+}
+
+.search-bar input[type="submit"] {
+  background-color: #262626;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-bar input[type="submit"]:hover {
+  background-color: #ecbd00;
+}
+
+.search-bar input[type="time"]::placeholder,
+.search-bar input[type="text"]::placeholder {
+  color: #a6a8a5;
+}
+
+.card-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #ffcc00;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0px;
+  padding-top: 40px;
+}
+
+.card-container .card {
+  position: relative;
+  width: 296px;
+  height: 400px;
+  margin: 30px;
+  box-shadow: 20px 20px 50px rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  background: #242424;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.card-container .card .card-content {
+  padding: 20px;
+  text-align: center;
+  transform: translateY(250px);
+  transition: 0.5s;
+}
+
+.card-container .card:hover .card-content {
+  transform: translateY(-165px);
+}
+
+.card-container .card .card-content h3 {
+  font-size: 2.3em;
+  color: #fff;
+  padding-bottom: 220px;
+}
+
+.card-container .card .card-content p {
+  font-size: 1em;
+  color: #fff;
+  font-weight: 300;
+}
+
+footer {
+  background-color: #fff;
+  color: #242424;
+  padding: 20px 0;
+  font-size: 14px;
+  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+p {
+  font-size: 20px;
+}
+
+.footer-content .titolo {
+  margin-bottom: 20px;
+  margin-right: 60px;
+}
+
+.footer-content h3 {
+  color: #242424;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-links li {
+  flex-basis: 50%;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.footer-links a {
+  color: #242424;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
+  .site-panel {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-bar select,
+  .search-bar input[type="time"],
+  .search-bar input[type="text"],
+  .search-bar input[type="submit"] {
+    flex-basis: 100%;
+  }
+
+  .site-panel .buttons {
+    margin-top: 10px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-links li {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .popup-content {
+    max-width: 80%;
+  }
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity 3s;
+}
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #242424;
+  padding: 20px;
+  text-align: center;
+  border: 3px solid #ffcc00;
+  border-radius: 20px;
+  transition: transform 3s;
+  max-width: 90%;
+  width: 600px;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #ffcc00;
+}
+
+.popup p {
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.popup button {
+  padding: 10px 20px;
+  background-color: #ffcc00;
+  color: #242424;
+  border: none;
+  cursor: pointer;
+  border: 2px solid #242424;
+  border-radius: 10px;
+  transition: background-color 0.3s, color 0.3s, border 0.3s;
+}
+
+.popup button:hover {
+  background-color: #242424;
+  color: #ffcc00;
+  border: 2px solid #ffcc00;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.alert-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #242424;
+  color: #fff;
+  padding: 40px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 10000;
+  border: 4px solid #ffcc00;
+  border-radius: 10px;
+}
+
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: crimson;
+}

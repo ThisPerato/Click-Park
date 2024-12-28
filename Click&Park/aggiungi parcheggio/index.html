@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aggiungi Parcheggio</title>
+    <!--Ricordiamoci icona sito-->
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="../image/logo.png" />
+</head>
+
+<body>
+    <div class="main">
+        <div class="topbar">
+            <div class="logo">
+                Click&Park
+            </div>
+            <div class="buttons">
+                <button id="how-it-works-btn">Come funziona?</button>
+                <button onclick="window.location.href='../accesso_effettuato/index.html';">Home</button>
+            </div>
+        </div>
+        <hr>
+        <div class="container">
+            <div class="assistenza">
+                <h2>Segnalaci il parcheggio e provvederemo ad aggiornare il nostro database</h2>
+                <form id="assistanceForm" action="index.php" method="post">
+                    <div class="form-group">
+                        <label for="municipio">Municipio:</label>
+                        <select name="municipio" id="selectmunicipio"
+                            placeholder:="Inserisci il municipio dove il parcheggio è localizzato" required>
+                            <option value="">Scegli un municipio</option>
+                            <option value="municipio_i">Municipio I</option>
+                            <option value="municipio_ii">Municipio II</option>
+                            <option value="municipio_iii">Municipio III</option>
+                            <option value="municipio_iv">Municipio IV</option>
+                            <option value="municipio_v">Municipio V</option>
+                            <option value="municipio_vi">Municipio VI</option>
+                            <option value="municipio_vii">Municipio VII</option>
+                            <option value="municipio_viii">Municipio VIII</option>
+                            <option value="municipio_ix">Municipio IX</option>
+                            <option value="municipio_x">Municipio X</option>
+                            <option value="municipio_xi">Municipio XI</option>
+                            <option value="municipio_xii">Municipio XII</option>
+                            <option value="municipio_xiii">Municipio XIII</option>
+                            <option value="municipio_xiv">Municipio XIV</option>
+                            <option value="municipio_xv">Municipio XV</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="via">Via:</label>
+                        <input type="text" id="via" name="via"
+                            placeholder="Inserire la via dove il parcheggio è localizzato" required>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn" type="submit" onclick="return validateForm()">Invia</button>
+                        <button class="btn reset" type="reset">Resetta</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer_container">
+            <div class="footer-content">
+                <p>&copy; 2023 Click&Park. Tutti i diritti riservati.</p>
+                <ul class="footer-links">
+                    <div class="titolo">
+                        <h3>Contatti</h3>
+                        <li><a href="../aiuto/aiuto_con_login/index.html">Contattaci</a></li>
+                    </div>
+                    <div class="titolo">
+                        <h3>Conoscenze utilizzate</h3>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+                        <li><a href="https://getbootstrap.com">Bootstrap</a></li>
+                        <li><a href="https://www.php.net/docs.php">PHP</a></li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <div id="how-it-works-popup" class="popup">
+        <div class="popup-content">
+            <h2>Vuoi suggerire un parcheggio non presente sul nostro sito?</h2>
+            <p>Ti basta inserire il municipio della via e la via! Provedderemo presto ad approvare il tuo suggerimento</p>
+            <button id="close-btn">Chiudi</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

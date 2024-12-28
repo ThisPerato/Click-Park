@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account</title>
+    <!--Ricordiamoci icona sito-->
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="../../image/logo.png" />
+</head>
+
+<body>
+    <div class="main">
+        <div class="topbar">
+            <div class="logo">
+                Click&Park
+            </div>
+            <div class="buttons">
+                <button id="how-it-works-btn">Come funziona?</button>
+                <button onclick="window.location.href='../../index.html';">Home</button>
+            </div>
+        </div>
+        <hr>
+        <div class="container">
+            <div class="assistenza">
+                <h2>Inviaci un messaggio e provvederemo ad aiutarti presto!</h2>
+                <form id="assistanceForm">
+                    <div class="form-group">
+                        <label for="name">Nome:</label>
+                        <input type="text" id="name" placeholder="Inserire il proprio nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="surname">Cognome:</label>
+                        <input type="text" id="surname" placeholder="Inserire il proprio cognome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Indirizzo Email:</label>
+                        <input type="email" id="email" placeholder="Inserire la propria e-mail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Descrizione:</label>
+                        <textarea id="description"
+                            placeholder="Descrivi quale problematica hai riscontrato o domande che vuoi porre nel dettaglio e provvederemo a rispondere presto"
+                            required></textarea>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn" type="submit">Invia</button>
+                        <button class="btn reset" type="reset">Resetta</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer_container">
+            <div class="footer-content">
+                <p>&copy; 2023 Click&Park. Tutti i diritti riservati.</p>
+                <ul class="footer-links">
+                    <div class="titolo">
+                        <h3>Conoscenze utilizzate</h3>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+                        <li><a href="https://getbootstrap.com">Bootstrap</a></li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <div id="how-it-works-popup" class="popup">
+        <div class="popup-content">
+            <h2>Hai bisogno di aiuto?</h2>
+            <p>Non devi fare altro che inserire i tuoi dati e descrivere il problema, provvederemo presto a trovare una
+                soluzione facile e veloce</p>
+
+            <button id="close-btn">Chiudi</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
